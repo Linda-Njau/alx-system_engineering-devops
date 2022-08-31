@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $cd ./2-bring_me_home
+echo $HOME
