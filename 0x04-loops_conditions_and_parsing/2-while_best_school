@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# Displays Best School using While loop
+i=0
+while [ $i -le 10 ]
+do
+	echo $"Best School"
+	((i +=1))
+done 
