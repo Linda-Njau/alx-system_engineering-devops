@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-displays lines containing bash of proceses
+#displays lines containing bash of proceses
 # shellcheck disable=SC2009
 ps -aux | grep bash
