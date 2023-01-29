@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 #kills highlander
-KILL -9 "$(pgrep -f bash ./7-highlander')"
+pkill -KILL -f "./7-highlander"
