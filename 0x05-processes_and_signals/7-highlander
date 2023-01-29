@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #process kill
+trap 'echo "I am invincible!!1"' SIGTERM
 while :
 do
 	echo "To infinity and beyond"
 	sleep 2
-	trap 'echo "I am  invincible!!!"' SIGTERM
 done
