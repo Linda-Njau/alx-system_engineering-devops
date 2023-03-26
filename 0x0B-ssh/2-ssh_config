@@ -1,0 +1,4 @@
+#configuration to connect without typing password
+54.208.185.83
+    PasswordAuthentication no
+    IdentityFile ~/.ssh/school
