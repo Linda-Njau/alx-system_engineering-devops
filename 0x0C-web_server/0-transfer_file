@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# transfers a file from client to a server
+# automated transfer of  a file from client to a server
 
 if [ $# -lt 3 ];
 then
