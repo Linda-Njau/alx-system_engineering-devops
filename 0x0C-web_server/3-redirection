@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
-# Nginx server so that /redirect_me to redirect to another page, a “301 Moved Permanently”
+# updating Nginx server ro redirect 301 moved permanently to a youtube video
 
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt-get -y install nginx
 sudo service nginx start
-newlines="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
-sudo sed -i "26i $newlines" /etc/nginx/sites-available/default
+new="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sudo sed -i "26i $new" /etc/nginx/sites-available/default
 sudo service nginx restart
 sudo service nginx reload
