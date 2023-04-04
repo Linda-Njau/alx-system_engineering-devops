@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# installing nginx, listening on port 80
+# installs nginx on default port and provides starting and restarting automation
 
 apt-get update
 apt-get install -y nginx
