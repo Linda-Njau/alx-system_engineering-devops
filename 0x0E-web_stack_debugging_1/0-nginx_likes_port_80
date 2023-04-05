@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+# Update package list and install Nginx
+apt-get update
+apt-get install nginx -y
+rm /etc/nginx/sites-enabled/default
+cat > /etc/nginx/sites-enabled/default << EOF
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server ipv6only=on;
+
+        root /var/www/html;
+        index index.html index.htm;
+
+        server_name _;
+
+        location / {
+                try_files \$uri \$uri/ =404;
+        }
+}
+EOF
+sudo service nginx restart
+
