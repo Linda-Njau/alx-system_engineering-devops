@@ -34,14 +34,13 @@ defaults
         errorfile 504 /etc/haproxy/errors/504.http
 
 frontend www-http
-         bind *:80
-         reqadd X-Forwarded-Proto:\ http
-         default_backend www-backend
-
-frontend www-https
-        bind *:443 ssl crt /etc/letsencrypt/live/www.lindanjau.tech/fullchain.pem
         mode http
+        bind *:80
+        bind *:443 ssl crt /etc/ssl/certs/ssl.pem
+        http-request redirect scheme https unless { ssl_fc }
         default_backend www-backend
+        http-request set-header X-Forwarded-Proto https if { ssl_fc }
+        http-request set-header X-Forwarded-Proto http if !{ ssl_fc }
 
 backend www-backend
         mode http
