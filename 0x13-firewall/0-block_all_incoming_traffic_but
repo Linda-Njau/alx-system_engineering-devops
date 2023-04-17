@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# configures ufw firewall to allow ports 22, 443 and 80.
+
+sudo apt-get update
+sudo apt-get install ufw -y
+sudo ufw default deny incoming
+sudo ufw allow 22/tcp
+sudo ufw allow 443/tcp
+sudo ufw allow 80/tcp
+sudo ufw enable
+sudo ufw status
