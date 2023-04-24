@@ -4,6 +4,7 @@ This script uses a REST API to retrieve employee information and their TODO list
 """
 import requests
 import sys
+""" import request and sys modules """
 
 if __name__ == '__main__':
     employee_id = sys.argv[1]
