@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This script uses a REST API to retrieve employee information and
-their TODO list progress using their employee ID
+This script uses a REST API to retrieve employee information and their TODO list progress using their employee ID
+The script returns completed tasks vs total tasks as well as employee username
 """
 import requests
 import sys
