@@ -4,7 +4,9 @@ This script uses a REST API to retrieve employee information and their todo list
 """
 import requests
 import sys
+import urllib3
 
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 if __name__ == '__main__':
     employee_id = sys.argv[1]
