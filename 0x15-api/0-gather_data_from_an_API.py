@@ -1,4 +1,4 @@
-#!/#usr/bin/python3
+#!/usr/bin/python3
 """
 This script uses a REST API to retrieve employee information and their TODO list
 """
