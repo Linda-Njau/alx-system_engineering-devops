@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """
 This script uses a REST API to retrieve employee information and
-their TODO list
+their TODO list progress using their employee ID
 """
 import requests
 import sys
+
 
 if __name__ == '__main__':
     employee_id = sys.argv[1]
