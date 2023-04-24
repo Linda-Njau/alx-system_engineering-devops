@@ -1,3 +1,1 @@
-
-
-s repository explores web de
+This repository holds different repos exploring system engineering devops
