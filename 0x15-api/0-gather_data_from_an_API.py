@@ -9,8 +9,8 @@ import sys
 if __name__ == '__main__':
     employee_id = sys.argv[1]
     
-    user = requests.get("https://jsonplaceholder.typicode.com/users/{}".format(employee_id), verify=False).json()
-    todo_list = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".format(employee_id), verify=False).json()
+    user = requests.get("https://jsonplaceholder.typicode.com/users/{}".format(employee_id)).json()
+    todo_list = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".format(employee_id)).json()
     completed_tasks = [todo for todo in todo_list if todo['completed']]
     num_completed = len(completed_tasks)
     num_total = len(todo_list)
