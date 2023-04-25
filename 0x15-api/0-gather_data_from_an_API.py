@@ -25,4 +25,4 @@ if __name__ == '__main__':
     for task in tasks.json():
         if (task.get("userId") == employee_id):
             if (task.get("completed")):
-                print("\t" + task.get("title"))
+                print("\t " + task.get("title"))
