@@ -13,12 +13,11 @@ if __name__ == '__main__':
     employee_url = "https://jsonplaceholder.typicode.com/users/" + argv[1]
     tasks_url = "https://jsonplaceholder.typicode.com/todos"
     employee_id = int(argv[1])
-    
     employee_name = (requests.get(employee_url)).json().get("name")
     tasks = requests.get(tasks_url)
     for task in tasks.json():
         if (task.get("userId") == employee_id):
-            total +=1
+            total += 1
             if (task.get("completed")):
                 completed += 1
     print("Employee {} is done with tasks({}/{}):"
