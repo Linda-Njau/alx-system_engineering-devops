@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-This script uses a REST API to retrieve employee information and their todo list progress using their employee ID
+This script uses a REST API to retrieve employee
+information and their todo list progress using their employee ID
 """
 import requests
 from sys import argv
@@ -15,7 +16,6 @@ if __name__ == '__main__':
     
     employee_name = (requests.get(employee_url)).json().get("name")
     tasks = requests.get(tasks_url)
-
     for task in tasks.json():
         if (task.get("userId") == employee_id):
             total +=1
