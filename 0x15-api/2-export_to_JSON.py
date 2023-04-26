@@ -13,7 +13,7 @@ if __name__ == '__main__':
     employee = requests.get("https://jsonplaceholder.typicode.com/users/{}".
                             format(employee_id), verify=False).json()
     todo = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".
-                                format(employee_id), verify=False).json()
+                        format(employee_id), verify=False).json()
     username = employee.get('username')
     with open("{}.json".format(employee_id), "w") as jsonfile:
         json.dump({employee_id: [{
