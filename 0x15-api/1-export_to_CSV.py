@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """
-This script uses REST APU and return todo list info on an employee based 
-on their ID and returns the data using csv format
+This script uses REST APU and return todo list info on an employee based
+on their ID and returns the data using csv formats
 """
 
 import csv
