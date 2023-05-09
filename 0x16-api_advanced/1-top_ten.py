@@ -2,7 +2,6 @@
 """
 function queries for the first top ten posts of a subreddit
 """
-from urllib import response
 import requests
 
 
