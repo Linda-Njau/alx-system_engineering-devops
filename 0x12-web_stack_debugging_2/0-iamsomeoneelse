@@ -1,9 +1,3 @@
 #!/usr/bin/env bash
-#takes user argument for whoami command
-if [[ -z "$(getent passwd "$1")" ]]; then
-    sudo useradd "$1" -p "$1"
-    sudo -u "$1" whoami
-    sudo userdel "$1"
-else
-    sudo -u "$1" whoami
-fi
+# Runs the whoami command under the user passed as argument.
+sudo -u "$1" whoami
